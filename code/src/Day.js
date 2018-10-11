@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const weekdayName = new Date()
 	.toLocaleDateString('en', { weekday: 'long' })
@@ -6,10 +7,23 @@ const weekdayName = new Date()
 
 const Day = ({ day }) => {
 	return (
-		<span>
-			{day} {weekdayName === day && <span>today</span>}
-		</span>
+		<>
+			<span className="dayname">{day}</span>
+			{weekdayName === day && <span className="today">today</span>}
+		</>
 	)
+}
+
+Day.propTypes = {
+	day: PropTypes.oneOf([
+		'monday',
+		'tuesday',
+		'wednesday',
+		'thursday',
+		'friday',
+		'saturday',
+		'sunday',
+	]),
 }
 
 export default Day

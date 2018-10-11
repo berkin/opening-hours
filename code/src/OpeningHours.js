@@ -16,7 +16,11 @@ const OpeningHours = ({ hours, nextHours }) => {
 		renderHours.push(<Hour {...nextHours[0]} />)
 	}
 
-	return <span>{hours.length ? renderHours : 'closed'}</span>
+	return (
+		<span className="hours">
+			{hours.length ? renderHours : <span className="closed">closed</span>}
+		</span>
+	)
 }
 
 OpeningHours.propTypes = {

@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body, #root {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #f8f8f8;
+}
+
+@font-face {
+  font-family: 'CircularStd-Book';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/CircularStd-Book.eot'); /* IE9 Compat Modes */
+  src: local('CircularStd-Book'), local('CircularStd-Book'),
+       url('./fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/CircularStd-Book.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/CircularStd-Book.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/CircularStd-Book.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/CircularStd-Book.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'CircularStd-Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/CircularStd-Medium.eot'); /* IE9 Compat Modes */
+  src: local('CircularStd-Medium'), local('CircularStd-Medium'),
+       url('./fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/CircularStd-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/CircularStd-Medium.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/CircularStd-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/CircularStd-Medium.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'CircularStd-Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/CircularStd-Bold.eot'); /* IE9 Compat Modes */
+  src: local('CircularStd-Bold'), local('CircularStd-Bold'),
+       url('./fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/CircularStd-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/CircularStd-Bold.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/CircularStd-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/CircularStd-Bold.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+
+body {
+  font-family: 'CircularStd-Book';
+	font-weight: normal;
+	font-style: normal;
+}
+
+.box {
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	height: 380px;
+	width: 340px;
+
+	box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+	border-radius: 10px;
+	padding: 25px;
+}
+
+.title {
+	padding: 0 0 10px 34px;
+	margin: 0;
+	font-family: 'CircularStd-Bold';
+	font-weight: normal;
+	font-size: 24px;
+	border-bottom: 1px solid #202125;
+	position: relative;
+}
+
+.clock {
+	content: ' ';
+	position: absolute;
+	top: 6px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #eee;
+	border-radius: 100%;
+}
+
+.clock:after {
+	content: ' ';
+	position: absolute;
+	top: 2px;
+	left: 7px;
+	width: 2px;
+	height: 8px;
+	background: #ccc;
+}
+
+.clock:before {
+	content: ' ';
+	position: absolute;
+	top: 4px;
+	left: 9px;
+	width: 2px;
+	height: 6px;
+	transform: rotate(45deg);
+	background: #ccc;
+}
+
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list-item {
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.hours {
+	float: right;
+}
+
+.dayname {
+	text-transform: capitalize;
+}
+
+.today {
+	color: #57cc14;
+	text-transform: uppercase;
+	padding: 0 10px;
+	font-size: 14px;
+
+	font-family: 'CircularStd-Medium';
+}
+
+.closed {
+	color: #202125;
+	text-transform: capitalize;
+}

@@ -10,7 +10,12 @@ const Hour = ({ type, value }) => {
 		hourText = hour + 'AM'
 	}
 
-	return <span>{hourText} </span>
+	return (
+		<span className="hour-container">
+			{hourText}
+			{type === 'open' && ' - '}
+		</span>
+	)
 }
 
 Hour.propTypes = {
