@@ -5,15 +5,15 @@ import Hour from './Hour'
 const OpeningHours = ({ hours, nextHours }) => {
 	let isOpen = false
 	let renderHours = []
-	hours.forEach(item => {
+	hours.forEach((item, i) => {
 		if (item.type === 'open' || (item.type === 'close' && isOpen)) {
-			renderHours.push(<Hour {...item} />)
+			renderHours.push(<Hour key={`hour${i}`} {...item} />)
 		}
 		isOpen = item.type === 'open'
 	})
 
 	if (isOpen) {
-		renderHours.push(<Hour {...nextHours[0]} />)
+		renderHours.push(<Hour key="hour" {...nextHours[0]} />)
 	}
 
 	return (
